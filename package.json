@@ -1,0 +1,15 @@
+{
+  "name": "standalone_fp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server"
+  },
+  "author": "krystiangw <gwizdala.kr@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "0.8.5"
+  }
+}

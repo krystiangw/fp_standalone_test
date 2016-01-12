@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <rel="stylesheet" type="text/css" href="css/main.css" />
+  <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=1024,minimal-ui" />
+  <title>FP standalone mode</title>
+</head>
+<body>
+	<h1>Test FP standalone mode!</h1>
+
+	<input type="filepicker" data-fp-container="window" data-fp-apikey="l5uQ3k7FQ5GoYCHyTdZV" data-fp-mimetypes="*/*" data-fp-container="modal" onchange="onChange(event.fpfile)">
+	<h2>Waiting for results...</h2>
+	<pre id="results">
+	</pre>
+  <script type="text/javascript" src="https://api.filepicker.io/v2/filepicker.js"></script>
+  <script type="text/javascript">
+	  var results = document.getElementById('results');
+	  console.log("2standalone: '", window.navigator.standalone);
+	  window.onChange = onChange;
+
+	  function onChange (Blob) {
+	  	console.log('Blob');
+	  	results.appendChild(document.createTextNode(JSON.stringify(Blob)));
+	  }
+  </script>
+</body>
+</html>
